@@ -1,4 +1,4 @@
-// export function action({request}) {
+// export function action({ request }: { request: Request }) {
 //   console.log(request);
 // }
 
