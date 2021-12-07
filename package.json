@@ -8,9 +8,10 @@
     "dev": "remix dev",
     "postinstall": "remix setup node",
     "start": "remix-serve build",
-    "db:clear": "npx prisma db push",
+    "db:sync": "npx prisma db push",
+    "db:clear": "npx prisma migrate reset",
     "db:seed": "node --require esbuild-register prisma/seed.ts",
-    "db:remake": "yarn db:clear && yarn db:seed"
+    "db:remake": "yarn db:clear && yarn db:sync && yarn db:seed"
   },
   "dependencies": {
     "@prisma/client": "3.6.0",
